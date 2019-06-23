@@ -1,0 +1,64 @@
+2019-05-27 15:35:59.088  INFO 728 --- [main] c.z.c.BuyerProductControllerTest         : Starting BuyerProductControllerTest on DESKTOP-JIH3DHV with PID 728 (started by 朱金河 in D:\productsell)
+2019-05-27 15:35:59.090  INFO 728 --- [main] c.z.c.BuyerProductControllerTest         : No active profile set, falling back to default profiles: default
+2019-05-27 15:36:01.737  WARN 728 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zhoulei]' package. Please check your configuration.
+2019-05-27 15:36:01.830  INFO 728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-27 15:36:01.835  INFO 728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-27 15:36:02.069  INFO 728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 219ms. Found 2 repository interfaces.
+2019-05-27 15:36:02.087  INFO 728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-27 15:36:02.089  INFO 728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-27 15:36:02.110  INFO 728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.zhoulei.repository.ProductCategoryReposity.
+2019-05-27 15:36:02.111  INFO 728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.zhoulei.repository.ProductInfoReposity.
+2019-05-27 15:36:02.112  INFO 728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2019-05-27 15:36:02.875  INFO 728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c0b0bb6c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 15:36:03.372  INFO 728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-27 15:36:04.053  INFO 728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-27 15:36:04.163  INFO 728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-27 15:36:04.251  INFO 728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-05-27 15:36:04.253  INFO 728 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-27 15:36:04.513  INFO 728 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-27 15:36:05.214  INFO 728 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-05-27 15:36:05.932  INFO 728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-27 15:36:07.791  INFO 728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-27 15:36:07.975  WARN 728 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-27 15:36:08.289  WARN 728 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-27 15:36:09.884  WARN 728 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-05-27 15:36:10.203  INFO 728 --- [main] c.z.c.BuyerProductControllerTest         : Started BuyerProductControllerTest in 12.528 seconds (JVM running for 14.634)
+2019-05-27 15:36:10.379  INFO 728 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-27 15:36:10.794  INFO 728 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-27 15:36:10.797  INFO 728 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-27 15:36:10.802  INFO 728 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-27 15:36:10.828  INFO 728 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-05-27 15:37:26.993  INFO 10024 --- [main] c.z.c.BuyerProductControllerTest         : Starting BuyerProductControllerTest on DESKTOP-JIH3DHV with PID 10024 (started by 朱金河 in D:\productsell)
+2019-05-27 15:37:27.013  INFO 10024 --- [main] c.z.c.BuyerProductControllerTest         : No active profile set, falling back to default profiles: default
+2019-05-27 15:37:29.083  WARN 10024 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.zhoulei]' package. Please check your configuration.
+2019-05-27 15:37:29.174  INFO 10024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-27 15:37:29.181  INFO 10024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-27 15:37:29.519  INFO 10024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 315ms. Found 2 repository interfaces.
+2019-05-27 15:37:29.552  INFO 10024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-27 15:37:29.555  INFO 10024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-27 15:37:29.591  INFO 10024 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.zhoulei.repository.ProductCategoryReposity.
+2019-05-27 15:37:29.594  INFO 10024 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.zhoulei.repository.ProductInfoReposity.
+2019-05-27 15:37:29.594  INFO 10024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-05-27 15:37:30.701  INFO 10024 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ec28edca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 15:37:31.524  INFO 10024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-27 15:37:32.389  INFO 10024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-27 15:37:32.497  INFO 10024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-27 15:37:32.604  INFO 10024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-05-27 15:37:32.605  INFO 10024 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-27 15:37:32.841  INFO 10024 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-27 15:37:33.379  INFO 10024 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-05-27 15:37:34.394  INFO 10024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-27 15:37:36.466  INFO 10024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-27 15:37:36.569  WARN 10024 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-27 15:37:37.107  WARN 10024 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-27 15:37:39.070  WARN 10024 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2019-05-27 15:37:39.338  INFO 10024 --- [main] c.z.c.BuyerProductControllerTest         : Started BuyerProductControllerTest in 13.4 seconds (JVM running for 15.619)
+2019-05-27 15:37:39.524  INFO 10024 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-27 15:37:40.351  INFO 10024 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-27 15:37:40.353  INFO 10024 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-27 15:37:40.365  INFO 10024 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-27 15:37:40.395  INFO 10024 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
