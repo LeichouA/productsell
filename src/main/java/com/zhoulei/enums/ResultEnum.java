@@ -3,7 +3,7 @@ package com.zhoulei.enums;
 import lombok.Getter;
 
 @Getter
-public enum ResultEnum {
+public enum ResultEnum implements CodeEnum{
 
     PARAM_ERROR(1,"参数不正确"),
     CART_EMPTY(2,"购物车为空"),
@@ -17,7 +17,9 @@ public enum ResultEnum {
     ORDER_FINISHED_NOTEXIST(17,"订单完成不存在"),
     OREDER_PAYSTATUS_ERROR(18,"订单支付状态错误"),
     ORDER_OPENID_ERROR(19,"订单openid不匹配"),
-    WTCHAT_MP_ERROR(20,"微信token出现异常")
+    WTCHAT_MP_ERROR(20,"微信token出现异常"),
+    ORDER_CANCEL_SUCCESS(21,"订单取消成功"),
+    PRODUCT_INFO_NULL(20,"产品信息为空")
     ;
     private Integer code;
     private String message;

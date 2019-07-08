@@ -1,6 +1,7 @@
 package com.zhoulei.repository;
 
 import com.zhoulei.dataobject.OrderMaster;
+import com.zhoulei.utils.KeyUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,14 +23,19 @@ public class OrderMasterReposityTest {
 
     @Test
     public void save(){
-        OrderMaster orderMaster=new OrderMaster();
-        orderMaster.setBuyerAddress("深圳市南山区");
-        orderMaster.setBuyerName("周磊");
-        orderMaster.setBuyerOpenid("12345");
-        orderMaster.setBuyerPhone("18617193127");
-        orderMaster.setOrderId("1233");
-        orderMaster.setOrderAmount(BigDecimal.valueOf(79));
-        orderMasterReposity.save(orderMaster);
+        for(int i=0;i<40;i++){
+            String s = KeyUtil.uniqueKey();
+            OrderMaster orderMaster=new OrderMaster();
+            orderMaster.setBuyerAddress("深圳市南山区");
+            orderMaster.setBuyerName("周磊");
+            orderMaster.setBuyerOpenid("12345");
+            orderMaster.setBuyerPhone("18617193127");
+            orderMaster.setOrderId(s);
+            orderMaster.setOrderAmount(BigDecimal.valueOf(79));
+            orderMasterReposity.save(orderMaster);
+
+        }
+
     }
 
     @Test

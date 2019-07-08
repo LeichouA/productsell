@@ -83,6 +83,18 @@
             <artifactId>best-pay-sdk</artifactId>
             <version>1.2.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-freemarker -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <version>2.1.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.github.binarywang</groupId>
             <artifactId>weixin-java-mp</artifactId>
@@ -91,10 +103,14 @@
     </dependencies>
 
     <build>
+        <finalName>sell</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.zhoulei.ProductsellApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

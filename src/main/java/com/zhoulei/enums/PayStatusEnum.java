@@ -2,17 +2,19 @@ package com.zhoulei.enums;
 
 import lombok.Getter;
 
+
 @Getter
-public enum  PayStatusEnum {
+public enum  PayStatusEnum implements CodeEnum{
 
     WAIT(0,"等待支付"),
-    SUCESS(0,"支付成功")
+    SUCESS(1,"支付成功")
     ;
     private Integer code;
-    private String messeage;
+    private String message;
 
-    PayStatusEnum(Integer code, String messeage) {
+    PayStatusEnum(Integer code, String message) {
         this.code = code;
-        this.messeage = messeage;
+        this.message = message;
     }
+
 }

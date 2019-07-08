@@ -3,8 +3,8 @@ spring:
     profiles: prod
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: zhoulei
-    password: AxoK(a*E;6f
-    url: jdbc:mysql://47.101.49.178:3306/productsell?characterEncoding=utf-8&useSSL=false
+    password: Zl19950329
+    url: jdbc:mysql://rm-wz990i1wpqv84rmweco.mysql.rds.aliyuncs.com:3306/productsell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
   jackson:
@@ -26,3 +26,5 @@ wechat:
   mchId: 1409146202
   mchKey: c976503d34ca432c601361f969fd8d85
   keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
+

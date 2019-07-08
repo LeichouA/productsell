@@ -15,6 +15,7 @@ public class OrderMaster2Orderdto {
         Orderdto orderdto=new Orderdto();
         BeanUtils.copyProperties(orderMaster,orderdto);
         return  orderdto;
+
     }
 
     public static List<Orderdto> convert(List<OrderMaster> orderMasterList){

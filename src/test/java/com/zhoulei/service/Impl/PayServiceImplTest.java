@@ -1,6 +1,7 @@
 package com.zhoulei.service.Impl;
 
 import com.zhoulei.dto.Orderdto;
+import com.zhoulei.service.OrderdtoService;
 import com.zhoulei.service.PayService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -21,10 +22,13 @@ public class PayServiceImplTest {
     @Autowired
     private PayService payService;
 
+    @Autowired
+    private OrderdtoService orderdtoService;
+
     @Test
     public void create() {
 
-        Orderdto orderdto = new Orderdto();
+        Orderdto orderdto = orderdtoService.findByone("1560333581196268038");
         payService.create(orderdto);
     }
 }

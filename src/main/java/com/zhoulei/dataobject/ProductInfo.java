@@ -1,5 +1,7 @@
 package com.zhoulei.dataobject;
 
+import com.zhoulei.enums.ProductStatusEnum;
+import com.zhoulei.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.Proxy;
@@ -7,6 +9,7 @@ import org.hibernate.annotations.Proxy;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Entity
 @DynamicUpdate
@@ -39,6 +42,17 @@ public class ProductInfo {
     /*类目编号*/
     private Integer categoryType;
 
+    private Date createTime;
+
+    private  Date updateTime;
+
     public ProductInfo() {
+    }
+
+    public ProductStatusEnum getProductStatusEnum(){
+
+        ProductStatusEnum productStatusEnum = EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
+
+        return productStatusEnum;
     }
 }

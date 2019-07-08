@@ -81,4 +81,35 @@ public class ProductInfoImpl implements ProductInfoService {
             productInfoReposity.save(productInfo);
         }
     }
+
+    @Override
+    public void onSellProduct(String productId) {
+
+        ProductInfo reposityOne = productInfoReposity.getOne(productId);
+        if (reposityOne==null){
+            throw new SellException(ResultEnum.PRODUCT_INFO_NULL);
+        }
+        if (reposityOne.getProductStatus()==ProductStatusEnum.UP.getCode()){
+            throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+        }
+
+        reposityOne.setProductStatus(ProductStatusEnum.UP.getCode());
+        productInfoReposity.save(reposityOne);
+    }
+
+    @Override
+    public void offSellProduct(String productId) {
+
+        ProductInfo productInfoReposityOne = productInfoReposity.getOne(productId);
+        if (productInfoReposityOne==null){
+            throw new SellException(ResultEnum.PRODUCT_INFO_NULL);
+        }
+        if (productInfoReposityOne.getProductStatus()==ProductStatusEnum.Down.getCode()){
+            throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+        }
+
+        productInfoReposityOne.setProductStatus(ProductStatusEnum.Down.getCode());
+        productInfoReposity.save(productInfoReposityOne);
+
+    }
 }

@@ -57,6 +57,8 @@ public class OrderdtoServiceImpl implements OrderdtoService {
             if(productInfo==null){
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
             }
+
+            //计算价格 单价*数量
             orderAmout=productInfo.getProductPrice().multiply(new BigDecimal(orderDetail
             .getProductQuantity())).add(orderAmout);
 
@@ -75,7 +77,7 @@ public class OrderdtoServiceImpl implements OrderdtoService {
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
         orderMasterReposity.save(orderMaster);
 
-        //扣库存
+        //扣库存   javaSE 8 流库 与 lambda的应用
         List<CartDTO> cartDTOList=orderdto.getOrderDetailList().stream().map(
                 e-> new CartDTO(e.getProductId(),e.getProductQuantity())
         ).collect(Collectors.toList());
@@ -194,4 +196,14 @@ public class OrderdtoServiceImpl implements OrderdtoService {
         }
         return orderdto;
     }
+
+    @Override
+    public Page<Orderdto> findList(Pageable pageable) {
+
+        Page<OrderMaster> orderMasterPage = orderMasterReposity.findAll(pageable);
+        List<Orderdto> convert = OrderMaster2Orderdto.convert(orderMasterPage.getContent());
+        return new PageImpl<>(convert,pageable,orderMasterPage.getTotalElements());
+    }
+
+
 }

@@ -1,14 +1,12 @@
 package com.zhoulei.service.Impl;
 
 import com.lly835.bestpay.enums.BestPayTypeEnum;
-import com.lly835.bestpay.exception.BestPayException;
 import com.lly835.bestpay.model.PayRequest;
 import com.lly835.bestpay.model.PayResponse;
 import com.lly835.bestpay.service.impl.BestPayServiceImpl;
 import com.zhoulei.dto.Orderdto;
 import com.zhoulei.service.PayService;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.validator.internal.util.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +20,7 @@ public class PayServiceImpl implements PayService {
     private BestPayServiceImpl bestPayService;
 
     @Override
-    public void create(Orderdto orderdto) {
+    public PayResponse create(Orderdto orderdto) {
 
         PayRequest payRequest = new PayRequest();
         payRequest.setOrderAmount(orderdto.getOrderAmount().doubleValue());
@@ -33,5 +31,11 @@ public class PayServiceImpl implements PayService {
         log.info("【微信支付】 request={}",payRequest);
         PayResponse payResponse =bestPayService.pay(payRequest);
         log.info("【微信支付】={}",payResponse);
+        return payResponse;
+    }
+
+    @Override
+    public String notify(String notifyData) {
+        return null;
     }
 }

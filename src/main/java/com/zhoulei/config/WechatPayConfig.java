@@ -35,6 +35,7 @@ public class WechatPayConfig {
         wxPayH5Config.setAppSecret(accoutConfig.getMpAppSecret());
         wxPayH5Config.setMchKey(accoutConfig.getMchKey());
         wxPayH5Config.setKeyPath(accoutConfig.getKeyPath());
+        wxPayH5Config.setNotifyUrl(accoutConfig.getNotifyUrl());
 
         return wxPayH5Config;
 

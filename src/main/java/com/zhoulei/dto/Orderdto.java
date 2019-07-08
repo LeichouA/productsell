@@ -1,10 +1,13 @@
 package com.zhoulei.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.zhoulei.dataobject.OrderDetail;
+import com.zhoulei.enums.CodeEnum;
 import com.zhoulei.enums.OrderStatusEnum;
 import com.zhoulei.enums.PayStatusEnum;
+import com.zhoulei.utils.EnumUtil;
 import lombok.Data;
 
 import javax.persistence.Id;
@@ -39,4 +42,18 @@ public class Orderdto {
     private Date updateTime;
 
     List<OrderDetail> orderDetailList;
-}
+
+    @JsonIgnore
+    public OrderStatusEnum getOrderStatusEnum(){
+
+        OrderStatusEnum orderStatusEnum = EnumUtil.getByCode(orderStatus, OrderStatusEnum.class);
+        return orderStatusEnum;
+    }
+
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum(){
+        PayStatusEnum payStatusEnum = EnumUtil.getByCode(payStatus, PayStatusEnum.class);
+        return payStatusEnum;
+    }
+    }
+
