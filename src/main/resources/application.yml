@@ -4,7 +4,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: zhoulei
     password: Zl19950329
-    url: jdbc:mysql://rm-wz990i1wpqv84rmweco.mysql.rds.aliyuncs.com:3306/productsell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://.aliyuncs.com:3306/productsell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
   jackson:
